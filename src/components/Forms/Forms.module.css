@@ -1,0 +1,195 @@
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.textDesc {
+  line-height: 1.375;
+  color: rgba(18, 20, 23, 0.8);
+  margin-bottom: 40px;
+  max-width: 438px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.inputsContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signupToggleBtn {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translate(0, -50%);
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupToggleBtn:hover,
+.signupToggleBtn:focus {
+  box-shadow: 0 0 20px rgba(244, 197, 80, 0.8);
+}
+
+.input {
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 100%;
+  outline: 0;
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--accent-color);
+}
+
+.label {
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  line-height: 1.375;
+  transform: translate(0, 50%);
+}
+
+.input:focus + .label {
+  transform: translateY(-20%);
+}
+
+.input:not(:placeholder-shown) + .label {
+  transform: translateY(-20%);
+}
+
+.input::placeholder {
+  opacity: 0;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  color: brown;
+}
+
+.submitBtn {
+  border-radius: 12px;
+  padding: 16px 16px;
+  background-color: var(--accent-color);
+  width: 100%;
+  border: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: var(--primary-text-color);
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+  color: var(--background-color);
+}
+
+.teacherWrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.teacherImg {
+  border-radius: 50%;
+}
+
+.teacherTextWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.teacherText {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--secondary-text-color);
+}
+
+.teacherTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.reasonText {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33333;
+  margin-bottom: 20px;
+}
+
+.radioList {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radioInput {
+  position: relative;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(18, 20, 23, 0.2);
+}
+
+.radioInput:checked::before,
+.radioInput:hover:before {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+}
+
+.radioInput:checked::after {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.radioInput input[type='radio']:checked + label::after {
+  display: block;
+}
+
+.radioLabel {
+  cursor: pointer;
+  line-height: 1.375;
+  text-align: center;
+}

@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+  width: 100%;
+  row-gap: 15px;
+}
+
+.headerNav {
+  flex-basis: 33.3333%;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.headerSignup {
+  flex-basis: 33.3333%;
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+}
+
+.headerLink {
+  line-height: 1.25;
+}
+
+.headerLink:hover,
+.headerLink:focus {
+  color: var(--accent-color);
+}
+
+.headerLink.active {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.headerBtn {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  line-height: 1.25;
+  min-width: 93px;
+}
+
+.headerBtn:hover,
+.headerBtn:focus {
+  color: var(--accent-color);
+}
+
+.headerBtnIcon {
+  stroke: var(--accent-color);
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.headerBtnReg {
+  padding: 14px 39px;
+  border-radius: 12px;
+  background-color: var(--primary-text-color);
+  color: var(--background-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  min-width: 175px;
+  text-align: center;
+}

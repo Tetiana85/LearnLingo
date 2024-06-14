@@ -1,0 +1,12 @@
+.footer {
+  padding: 40px 0;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 448px;
+}
+
+.footerText {
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(18, 20, 23, 0.5);
+  z-index: 10;
+}
+
+.backdrop:hover {
+  cursor: pointer;
+}
+
+.popup {
+  position: relative;
+  padding: 64px;
+  background-color: var(--background-color);
+  border-radius: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 566px;
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+.popup:hover {
+  cursor: auto;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}

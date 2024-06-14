@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  flex-basis: 33.3333%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-right: auto;
+}
+
+.logoText:hover,
+.logoText:focus {
+  color: var(--accent-color);
+}

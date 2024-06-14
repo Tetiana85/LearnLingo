@@ -1,0 +1,102 @@
+main {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body.home-page {
+  background-color: #FFFFFF;
+}
+
+.heroWrp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 320px;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.heroDesc {
+  border-radius: 30px;
+  background-color: #f8f8f8;
+  padding: 98px 108px 98px 64px;
+}
+
+.heroTitle {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.16667;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  max-width: 548px;
+  width: 100%;
+}
+
+.heroSmall {
+  font-style: italic;
+  font-weight: 400;
+  background-color: var(--secondary-color);
+}
+
+.heroText {
+  max-width: 471px;
+  line-height: 1.375;
+  letter-spacing: -0.02em;
+  margin-bottom: 64px;
+}
+
+.heroLink {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  padding: 20px 88px;
+  min-width: 268px;
+  margin-bottom: 64px;
+  white-space: nowrap;
+}
+
+.heroLink:hover,
+.heroLink:focus {
+  color: var(--background-color);
+}
+
+.heroImg {
+  max-width: 100%;
+}
+
+.heroList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 320px;
+  padding: 40px 0;
+  border-radius: 30px;
+  border: 1.5px dashed var(--accent-color);
+  row-gap: 15px;
+}
+
+.heroItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 217px;
+}
+
+.heroTotal {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.14286;
+  letter-spacing: -0.02em;
+}
+
+.heroBenefits {
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.7);
+  max-width: 80px;
+}
