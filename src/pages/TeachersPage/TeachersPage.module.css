@@ -4,3 +4,11 @@
   margin: 0 auto;
   padding: 0 64px;
 }
+
+.searchBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  animation: 1000ms ease 0s 1 normal none running slideUp;
+}

@@ -23,7 +23,7 @@ const HomePage = () => {
   ];
 
   useEffect(() => {
-    document.body.classList.add('home-page'); // Добавить класс 'home-page' к body
+    document.body.classList.add('home-page');
 
     auth.onAuthStateChanged((maybeUser) => { 
       if (maybeUser !== null) { 
@@ -37,7 +37,7 @@ const HomePage = () => {
     });
 
     return () => {
-      document.body.classList.remove('home-page'); // Удалить класс 'home-page' с body при размонтировании компонента
+      document.body.classList.remove('home-page'); 
     };
   }, [auth, dispatch]);
 

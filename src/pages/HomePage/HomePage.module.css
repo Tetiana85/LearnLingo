@@ -4,9 +4,6 @@ main {
   margin: 0 auto;
 }
 
-body.home-page {
-  background-color: #FFFFFF;
-}
 
 .heroWrp {
   display: flex;
