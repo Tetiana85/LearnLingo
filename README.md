@@ -1,6 +1,6 @@
 # LearnLingo - professional language training
 
-(https://andriiskliar.github.io/learnlingo/)
+(https://github.com/Tetiana85/LearnLingo)
 
 This project was created using [Create React App].
 
@@ -26,6 +26,6 @@ consultation.
 ### Task references:
 
 1.  Layout
-    (https://www.figma.com/file/dewf5jVviSTuWMMyU3d8Mc/Learn-Lingo?type=design&node-id=0-1&mode=design&t=4rHJuLO4O1yzFHxI-0)
+    (https://www.figma.com/file/dewf5jVviSTuWMMyU3d8Mc/%D0%9F%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82-%D0%B4%D0%BB%D1%8F-%D0%9A%D0%A6?type=design&node-id=0-1&mode=design&t=jCmjSs9PeOjObYSc-0)
 2.  Technical task
     (https://docs.google.com/document/d/1ZB_MFgnnJj7t7OXtv5hESSwY6xRgVoACZKzgZczWc3Y/edit)
