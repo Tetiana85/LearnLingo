@@ -11,7 +11,7 @@ import { ToastContainer } from 'react-toastify';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <PersistGate persistor={persistor}>
-      <BrowserRouter basename="/learnlingo">
+      <BrowserRouter basename="/LearnLingo">
         <App />
       </BrowserRouter>
     </PersistGate>
