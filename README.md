@@ -1,4 +1,5 @@
 # LearnLingo - professional language training
+LearnLingo App - An application for a company that offers the services of language teachers online. The application consists of 3 pages: Home, Teachers, Favorites
 
 (https://github.com/Tetiana85/LearnLingo)
 
