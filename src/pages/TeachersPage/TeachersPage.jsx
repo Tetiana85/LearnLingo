@@ -40,16 +40,26 @@ import css from './TeachersPage.module.css';
 
 const TeachersPage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [selectedPrice, setSelectedPrice] = useState(null); 
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+  };
+
+  const handlePriceChange = (price) => {
+    setSelectedPrice(price);
+  };
 
   return (
     <main className={css.main}>
-      <SearchBar setLanguage={setSelectedLanguage} /> 
-      <LoadData selectedLanguage={selectedLanguage} />
+      <SearchBar setLanguage={handleLanguageChange} setPrice={handlePriceChange} />
+      <LoadData selectedLanguage={selectedLanguage} selectedPrice={selectedPrice} />
     </main>
   );
-}
+};
 
 export default TeachersPage;
+
 
 
 
