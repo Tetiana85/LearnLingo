@@ -6,7 +6,7 @@ import { app, googleAuthProvider } from "../../../firebase";
 export const Auth = () => {
   const auth = getAuth(app);
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // Добавляем состояние загрузки
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((maybeUser) => {
@@ -17,7 +17,7 @@ export const Auth = () => {
           .then(credentials => setUser(credentials.user))
           .catch((e) => console.error(e));
       }
-      setLoading(false); // Завершаем состояние загрузки после проверки состояния
+      setLoading(false); 
     });
 
     return () => unsub();
