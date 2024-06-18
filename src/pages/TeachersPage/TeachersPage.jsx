@@ -72,33 +72,44 @@
 
 // export default TeachersPage;
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LoadData } from '../../components/LoadData/LoadData';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 import { useAuth } from '../../hooks/use-auth';
 import css from './TeachersPage.module.css';
+import { getAllFiltered } from '../../../api';
 
 const TeachersPage = () => {
   useAuth();
 
-  const [selectedLanguage, setSelectedLanguage] = useState('');
-  const [selectedPrice, setSelectedPrice] = useState({ min: 0, max: 100 }); // Initialize with default price range
+  const [language, setLanguage] = useState(null);
+  const [lvl, setLvl] = useState(null);
+  const [price, setPrice] = useState(null);
 
-  const handleLanguageChange = (language) => {
-    setSelectedLanguage(language);
-  };
+  // local state for filtered teachers
+  const [filtered, setFiltered] = useState(null);
 
-  const handlePriceChange = (priceRange) => {
-    setSelectedPrice(priceRange);
-  };
+  useEffect(() => {
+    const getFilteredTeachers = async () => {
+      try {
+        const filteredTeachers = await getAllFiltered(language, lvl, price);
+        setFiltered(filteredTeachers);
+      } catch (error) {
+        console.error('Error fetching filtered teachers:', error);
+      }
+    };
+
+    getFilteredTeachers();
+  }, [language, lvl, price]);
 
   return (
     <main className={css.main}>
       <SearchBar
-        setLanguage={handleLanguageChange}
-        setPrice={handlePriceChange}
+        setLanguage={setLanguage}
+        setLvl={setLvl}
+        setPrice={setPrice}
       />
-      <LoadData languageFilter={selectedLanguage} priceFilter={selectedPrice} />
+      <LoadData filtered={filtered} lvl={lvl} />
     </main>
   );
 };
