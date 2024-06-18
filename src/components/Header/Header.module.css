@@ -1,8 +1,8 @@
 .header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px 0;
   width: 100%;
   row-gap: 15px;
@@ -67,4 +67,15 @@
   line-height: 1.25;
   min-width: 175px;
   text-align: center;
+}
+@media (min-width: 900px) {
+  .header {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    max-width: 1184px;
+  }
 }

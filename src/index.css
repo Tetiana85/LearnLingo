@@ -72,13 +72,13 @@ img {
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   font-weight: 400;
   font-size: 16px;
 }
 
 body.home-page {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .container {
@@ -86,12 +86,29 @@ body.home-page {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  min-width: 320px;
   max-width: 1440px;
-  padding: 0 64px;
+  padding: 20px 64px;
   margin: 0 auto;
 }
 
 footer {
-  margin-top: auto;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #8a8a89;
+  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (900 - 320)));
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+}
+@media (min-width: 900px) {
+  footer {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    padding: 20px 64px 32px;
+  }
 }

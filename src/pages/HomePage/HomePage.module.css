@@ -1,15 +1,14 @@
 main {
-  min-width: 320px;
+  min-width: 280px;
   max-width: 1440px;
-  margin: 0 auto;
+  margin-bottom: auto;
 }
-
 
 .heroWrp {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-width: 320px;
+  min-width: 280px;
   gap: 24px;
   margin-bottom: 24px;
 }
@@ -17,15 +16,16 @@ main {
 .heroDesc {
   border-radius: 30px;
   background-color: #f8f8f8;
-  padding: 98px 108px 98px 64px;
+  padding-bottom: 4cap;
+  text-align: center;
 }
 
 .heroTitle {
   font-weight: 500;
-  font-size: 48px;
+  font-size: calc(30px + (48 - 30) * ((100vw - 320px) / (768 - 320)));
   line-height: 1.16667;
   letter-spacing: -0.02em;
-  margin-bottom: 32px;
+  margin: 32px 0;
   max-width: 548px;
   width: 100%;
 }
@@ -40,7 +40,9 @@ main {
   max-width: 471px;
   line-height: 1.375;
   letter-spacing: -0.02em;
-  margin-bottom: 64px;
+  margin: 0 auto;
+  margin-bottom: calc(40px + (64 - 40) * ((100vw - 320px) / (768 - 320)));
+  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));
 }
 
 .heroLink {
@@ -69,11 +71,12 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  min-width: 320px;
-  padding: 40px 0;
+  max-width: 568px;
+  padding: 40px 25px;
   border-radius: 30px;
   border: 1.5px dashed var(--accent-color);
   row-gap: 15px;
+  margin: 0 auto 20px;
 }
 
 .heroItem {
@@ -96,4 +99,80 @@ main {
   letter-spacing: -0.02em;
   color: rgba(18, 20, 23, 0.7);
   max-width: 80px;
+}
+@media (min-width: 700px) {
+  .heroList {
+    padding: 40px 25px;
+  }
+}
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+  .heroText {
+    margin: 0 auto;
+    margin-bottom: 64px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .heroList {
+    max-width: 100%;
+  }
+  .heroDesc {
+    padding: 98px 0 0;
+  }
+  .heroTitle {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.16667;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    max-width: 548px;
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .heroDesc {
+    border-radius: 30px;
+    background-color: #f8f8f8;
+    padding: 98px 108px 98px 64px;
+  }
+  main {
+    min-width: 320px;
+    max-width: 1440px;
+  }
+  .heroWrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 320px;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .heroList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-width: 100%;
+    padding: 40px 0;
+    border-radius: 30px;
+    border: 1.5px dashed var(--accent-color);
+    row-gap: 15px;
+  }
+  .heroTitle {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.16667;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    max-width: 548px;
+    width: 100%;
+  }
+  .heroText {
+    max-width: 471px;
+    line-height: 1.375;
+    letter-spacing: -0.02em;
+    margin-bottom: 64px;
+  }
 }
