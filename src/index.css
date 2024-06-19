@@ -78,7 +78,7 @@ body {
 }
 
 body.home-page {
-  background-color: #ffffff;
+  background-color: var(--background-color);
 }
 
 .container {
@@ -94,7 +94,7 @@ body.home-page {
 footer {
   font-weight: 500;
   line-height: 1.25;
-  color: #8a8a89;
+  color: var(--secondary-text-color);
   font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (900 - 320)));
 }
 

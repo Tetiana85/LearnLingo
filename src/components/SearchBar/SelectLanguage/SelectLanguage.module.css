@@ -20,8 +20,7 @@
 
 .customSelect {
   border: 1px solid var(--accent-light);
-  outline: none;
-  width: 221px;
+  width: 144px;
   height: 48px;
   background: #fff;
   border-radius: 14px;
@@ -30,25 +29,27 @@
   color: #121417;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
-  padding: 8px;
 }
 
-.customSelect:focus {
+.customSelectHover {
   border: 1px solid var(--accent-color);
 }
 
-.customSelect option {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #121417;
+.customSelectFocus {
+  border: 1px solid var(--accent-color);
 }
 
-.customSelect option:focus {
+.customOption {
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.customOptionFocused {
   color: var(--dark-color);
 }
 
 .customValueContainer {
   border-radius: 14px;
-  box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
 }

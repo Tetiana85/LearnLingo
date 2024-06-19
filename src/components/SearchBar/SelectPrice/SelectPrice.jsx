@@ -1,72 +1,3 @@
-// import { prices } from "../../../lib/info";
-// import css from './SelectPrice.module.css';
-
-// export const SelectPrice = ({ setPrice }) => {
-
-//   const handleChange = (e) => {
-//     const value = e.target.value;
-//     setPrice(value ? value : null);
-//   };
-
-//   return (
-//     <div className={css.searchContainer}>
-//       <div className={css.selectContainer}>
-//         <label htmlFor="price" className={css.labelSelect}>Price</label>
-//         <select
-//           id="price"
-//           className={css.customSelect}
-//           onChange={handleChange}
-//           defaultValue=""
-//         >
-//           <option value="" disabled>$/hour</option>
-//           {prices.map((price) => (
-//             <option key={price.value} value={price.value}>
-//               {price.label}
-//             </option>
-//           ))}
-//         </select>
-//       </div>
-//     </div>
-//   );
-// };
-
-// =======1
-
-// import { prices } from '../../../lib/info';
-// import css from './SelectPrice.module.css';
-
-// export const SelectPrice = ({ setPrice }) => {
-//   const handleChange = (e) => {
-//     const value = e.target.value;
-//     setPrice(value ? Number(value) : null);
-//   };
-
-//   return (
-//     <div className={css.searchContainer}>
-//       <div className={css.selectContainer}>
-//         <label htmlFor="price" className={css.labelSelect}>
-//           Price
-//         </label>
-//         <select
-//           id="price"
-//           className={css.customSelect}
-//           onChange={handleChange}
-//           defaultValue=""
-//         >
-//           <option value="" disabled>
-//             $/hour
-//           </option>
-//           {prices.map((price) => (
-//             <option key={price.value} value={price.value}>
-//               {price.label}
-//             </option>
-//           ))}
-//         </select>
-//       </div>
-//     </div>
-//   );
-// };
-
 import Select from 'react-select';
 import { prices } from '../../../lib/info';
 import css from './SelectPrice.module.css';
@@ -75,7 +6,6 @@ export const SelectPrice = ({ setPrice }) => {
   const handleChange = (e) => {
     if (e === null) {
       setPrice(null);
-      return;
     } else {
       setPrice(e.value);
     }
@@ -92,7 +22,7 @@ export const SelectPrice = ({ setPrice }) => {
       },
       boxShadow: state.isFocused ? null : baseStyles.boxShadow,
       outline: 'none',
-      width: '144px',
+      width: '124px',
       height: '48px',
       background: '#fff',
       borderRadius: '14px',
@@ -116,7 +46,16 @@ export const SelectPrice = ({ setPrice }) => {
       fontWeight: '500',
       lineHeight: '1.11111',
       outline: 'none',
-      color: state.isFocused ? 'var(--dark-color)' : 'rgba(18, 20, 23, 0.2)',
+      background: state.isSelected
+        ? 'transparent'
+        : state.isFocused
+        ? 'transparent'
+        : 'transparent',
+      color: state.isSelected
+        ? 'var(--dark-color)'
+        : state.isFocused
+        ? 'var(--dark-color)'
+        : 'rgba(18, 20, 23, 0.2)',
     }),
     valueContainer: (baseStyles) => ({
       ...baseStyles,
@@ -146,6 +85,7 @@ export const SelectPrice = ({ setPrice }) => {
           Price
         </label>
         <Select
+          id="price"
           options={prices}
           placeholder={'$/hour'}
           onChange={handleChange}

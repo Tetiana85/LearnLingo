@@ -66,59 +66,36 @@ export async function getTeachersByPrice(price) {
 //========================= GET ALL TEACHERS BY LANGUAGE, LEVEL AND PRICE
 export async function getAllFiltered(language, lvl, price) {
   try {
-    if (language && !lvl && !price) {
-      let teachersLang = await getTeachersByLanguage(language);
-      return teachersLang;
-    } else if (lvl && !language && !price) {
-      let teachersLvl = await getTeachersByLvl(lvl);
-      return teachersLvl;
-    } else if (price && !language && !lvl) {
-      let teachersPrice = await getTeachersByPrice(price);
-      return teachersPrice;
-    } else if (language && lvl && !price) {
-      let teachersLang = await getTeachersByLanguage(language);
-      let teachersLvl = await getTeachersByLvl(lvl);
-      const intersectedTeachers = teachersLang.filter((teacherLvl) => {
-        return teachersLvl.some(
-          (teacherLang) => teacherLang.id === teacherLvl.id
-        );
-      });
-      return intersectedTeachers;
-    } else if (lvl && price && !language) {
-      let teachersLvl = await getTeachersByLvl(lvl);
-      let teachersPrice = await getTeachersByPrice(price);
-      const intersectedTeachers = teachersLvl.filter((teacherLvl) => {
-        return teachersPrice.some(
-          (teacherPrice) => teacherPrice.id === teacherLvl.id
-        );
-      });
-      return intersectedTeachers;
-    } else if (language && price && !lvl) {
-      let teachersLang = await getTeachersByLanguage(language);
-      let teachersPrice = await getTeachersByPrice(price);
-      const intersectedTeachers = teachersLang.filter((teacherLang) => {
-        return teachersPrice.some(
-          (teacherPrice) => teacherLang.id === teacherPrice.id
-        );
-      });
-      return intersectedTeachers;
-    } else if (language && lvl && price) {
-      let teachersLang = await getTeachersByLanguage(language);
-      let teachersLvl = await getTeachersByLvl(lvl);
-      let teachersPrice = await getTeachersByPrice(price);
-      const intersectedTeachers = teachersLang.filter((teacherLang) => {
-        return teachersLvl.some((teacherLvl) => {
-          return teachersPrice.some(
-            (teacherPrice) =>
-              teacherPrice.id === teacherLvl.id &&
-              teacherLvl.id === teacherLang.id
-          );
-        });
-      });
+    const db = getDatabase();
+    const dbRef = ref(db);
+    const snapshot = await get(dbRef);
 
-      return intersectedTeachers;
+    if (!snapshot.exists()) {
+      console.log('No data available');
+      return [];
     }
+
+    let teachers = Object.values(snapshot.val());
+
+    if (language) {
+      teachers = teachers.filter((teacher) =>
+        teacher.languages.includes(language)
+      );
+    }
+
+    if (lvl) {
+      teachers = teachers.filter((teacher) => teacher.levels.includes(lvl));
+    }
+
+    if (price) {
+      teachers = teachers.filter(
+        (teacher) => teacher.price_per_hour === +price
+      );
+    }
+
+    return teachers;
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching filtered teachers:', error);
+    return [];
   }
 }

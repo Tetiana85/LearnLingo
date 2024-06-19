@@ -15,13 +15,12 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28571;
-  color: #8a8a89;
+  color: var(--secondary-text-color);
 }
 
 .customSelect {
   border: 1px solid var(--accent-light);
-  outline: none;
-  width: 198px;
+  width: 144px;
   height: 48px;
   background: #fff;
   border-radius: 14px;
@@ -30,35 +29,21 @@
   color: #121417;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
-  padding: 8px;
 }
 
-.customSelect:focus {
+.customSelectHover {
   border: 1px solid var(--accent-color);
 }
 
-.customSelect option {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #121417; /* Колір тексту у варіантах */
-}
-
-.customSelect option:focus {
-  color: var(--dark-color);
-}
-
-.customPlaceholder {
-  color: #121417;
-  font-size: 18px;
-  font-weight: 500;
+.customSelectFocus {
+  border: 1px solid var(--accent-color);
 }
 
 .customOption {
-  font-family: 'Roboto', sans-serif;
+  border: none;
   font-size: 18px;
   font-weight: 500;
-  color: #121417;
+  font-family: 'Roboto', sans-serif;
 }
 
 .customOptionFocused {
@@ -67,5 +52,4 @@
 
 .customValueContainer {
   border-radius: 14px;
-  box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
 }
