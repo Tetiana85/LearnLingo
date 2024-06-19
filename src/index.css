@@ -87,7 +87,7 @@ body.home-page {
   align-items: center;
   min-height: 100vh;
   max-width: 1440px;
-  padding: 20px 20px;
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -97,11 +97,7 @@ footer {
   color: #8a8a89;
   font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (900 - 320)));
 }
-@media (min-width: 768px) {
-  .container {
-    padding: 30px;
-  }
-}
+
 @media (min-width: 900px) {
   footer {
     font-size: 16px;

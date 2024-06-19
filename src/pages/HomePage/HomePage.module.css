@@ -3,7 +3,6 @@ main {
   max-width: 1440px;
   margin-bottom: auto;
 }
-
 .heroWrp {
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +15,7 @@ main {
 .heroDesc {
   border-radius: 30px;
   background-color: #f8f8f8;
+  padding: 10px;
   padding-bottom: 4cap;
   text-align: center;
 }
@@ -120,7 +120,7 @@ main {
     max-width: 100%;
   }
   .heroDesc {
-    padding: 98px 0 0;
+    padding: 64px 10px;
   }
   .heroTitle {
     font-weight: 500;

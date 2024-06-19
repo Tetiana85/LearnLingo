@@ -1,7 +1,7 @@
 .main {
-  min-width: 320px;
+  min-width: 280px;
   max-width: 1440px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 .searchBar {

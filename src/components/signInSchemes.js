@@ -9,7 +9,7 @@ const mainSchema = Yup.object().shape({
     .required('Email is required')
     .matches(
       /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-      'Emails: digits, letters, . - _ only, e.g., example@mail.com.'
+      'Invalid email. Example: example@mail.com'
     )
     .email('Invalid email format, example@mail.com'),
   password: Yup.string()

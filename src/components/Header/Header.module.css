@@ -85,8 +85,10 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px;
   width: 100%;
+  min-width: 280px;
+  max-width: 568px;
   row-gap: 15px;
 }
 
@@ -164,7 +166,7 @@
   fill: var(--primary-text-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .headerNav,
   .headerSignup {
     display: none;
@@ -173,11 +175,9 @@
     display: block;
   }
 }
-
-/* Ограничиваем максимальную ширину для хедера */
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .header {
-    max-width: 900px;
+    max-width: 80%;
   }
 }
 

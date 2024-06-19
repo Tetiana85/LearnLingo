@@ -16,7 +16,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 24px;
   margin-bottom: 40px;
 }
 
@@ -67,6 +67,7 @@
 
 .input:focus + .label {
   transform: translateY(-20%);
+  color: transparent;
 }
 
 .input:not(:placeholder-shown) + .label {
@@ -192,4 +193,14 @@
   cursor: pointer;
   line-height: 1.375;
   text-align: center;
+}
+
+.transparentLabel {
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .reasonText {
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (768 - 320)));
+  }
 }
