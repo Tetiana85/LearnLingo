@@ -6,7 +6,7 @@
   padding: 20px;
   width: 100%;
   min-width: 280px;
-  max-width: 568px;
+  /* max-width: 568px; */
   row-gap: 15px;
 }
 

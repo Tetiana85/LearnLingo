@@ -1,6 +1,6 @@
 .teachersImgWrp {
   position: relative;
-  width: 120px;
+  min-width: 120px;
   height: 120px;
   border-radius: 50%;
   display: flex;
@@ -36,6 +36,7 @@
 }
 
 .teachersInfoWrp {
+  width: 100%;
   max-width: 967px;
   font-weight: 500;
   line-height: 1.5;
@@ -189,6 +190,18 @@
   padding: 8px 16px;
   border-radius: 35px;
   border: 1px solid rgba(18, 20, 23, 0.2);
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.teachersLevelsItem.inactiveLevel {
+  background-color: transparent;
+  border: 1px solid rgba(18, 20, 23, 0.2);
+}
+
+.teachersLevelsItem.activeLevel {
+  background-color: var(--accent-color);
+  border: none;
 }
 
 .teachersReviewStar {
@@ -210,9 +223,4 @@
 .teachersTrialBtn:hover,
 .teachersTrialBtn:focus {
   color: var(--background-color);
-}
-
-.activeLevel {
-  background-color: var(--accent-color);
-  border: none;
 }

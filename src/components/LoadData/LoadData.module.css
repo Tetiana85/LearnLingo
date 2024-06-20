@@ -14,12 +14,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: start;
+  justify-content: center;
   max-width: 1184px;
   width: 100%;
   border-radius: 24px;
   padding: 24px;
   gap: 48px;
-  background-color: #f8f8f8;
+  background-color: var(--background-color);
 }
 
 .cardsLoadMoreBtn {
@@ -38,4 +39,11 @@
 .cardsLoadMoreBtn:hover,
 .cardsLoadMoreBtn:focus {
   color: var(--background-color);
+}
+
+@media (min-width: 600px) {
+  .cardsItem {
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+  }
 }

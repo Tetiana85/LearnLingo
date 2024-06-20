@@ -169,7 +169,11 @@ export const TeachersCard = ({ card, selectedLevel }) => {
                 <li
                   key={nanoid()}
                   className={`${css.teachersLevelsItem} ${
-                    level === selectedLevel ? css.activeLevel : ''
+                    level === selectedLevel
+                      ? css.activeLevel
+                      : selectedLevel
+                      ? css.inactiveLevel
+                      : ''
                   }`}
                 >
                   #{level}
@@ -191,7 +195,11 @@ export const TeachersCard = ({ card, selectedLevel }) => {
               <li
                 key={nanoid()}
                 className={`${css.teachersLevelsItem} ${
-                  level === selectedLevel ? css.activeLevel : ''
+                  level === selectedLevel
+                    ? css.activeLevel
+                    : selectedLevel
+                    ? css.inactiveLevel
+                    : ''
                 }`}
               >
                 #{level}
